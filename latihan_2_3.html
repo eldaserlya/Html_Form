@@ -1,65 +1,215 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir</title>
+    <link rel="icon" type="img/png" href="html_form/gambar/icon.png" sizes="16x16">
+    <link rel="stylesheet" href="html_form/css/main.css">
     <style>
+        #header {
+            text-align: center; 
+            background-color: lightcyan; 
+            padding: 7px; 
+            width: 52.5%; 
+            margin-left: auto;
+            margin-right: auto;
+        }
         #content {
             width: 50%;
             margin: 0 auto;
-            text-align: center;
-        }
-        form {
             text-align: left;
-            display: inline-block;
+            border: 1px solid #ccc; 
+            padding: 20px; 
         }
+        .file-upload {
+            display: inline-block;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        .file-upload:hover {
+            background-color: #e0e0e0;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        legend {
+            padding: 0 10px;
+            border: 0 solid #ccc;
+            background-color: #f9f9f9;
+        }
+
         fieldset {
-            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
         }
-        label, input, select, textarea {
-            display: block;
+
+        label {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             margin-bottom: 10px;
         }
-        textarea {
-            resize: vertical;
+
+        label > span {
+            width: 150px;
+            margin-right: 10px;
         }
+            fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        legend {
+            padding: 0 10px;
+            border: 0 solid #ccc;
+            background-color: #f9f9f9;
+        }
+        #alamat_sekolah_asal {
+            width: 300px; /* Lebar textarea */
+            height: 150px; /* Tinggi textarea */
+            text-align: top;
+            vertical-align: top; /* Align alamat sekolah ke atas */
+        }
+        #alamat_rumah {
+            width: 300px; 
+            height: 150px; 
+            text-align: top;
+            vertical-align: top; 
+        }
+        label[for="alamat_rumah"] {
+            vertical-align: top;
+            display: inline-block;
+            width: 150px; 
+        }
+        label[for="alamat_sekolah_asal"] {
+            vertical-align: top;
+            display: inline-block;
+            width: 150px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 50px; /* Sesuaikan dengan jarak vertikal dari atas */
+        }
+
+        .button-container button {
+            margin: 0 10px; /* Sesuaikan dengan jarak horizontal antara tombol */
+        }  
     </style>
 </head>
 <body>
-<div id="header">
-    <h1>Pendaftaran Mahasiswa Baru</h1>
-</div>
+    <div id="header">
+        <h2>Pendaftaran Mahasiswa Baru PNM</h2>
+        <h3>Isi Formulir Berikut!</h3>
+    </div>
+    <div id="content">
+        <fieldset>
+            <legend><strong>Formulir Pendaftaran Mahasiswa Baru</strong></legend>
+            <form action="proses.php" method="POST" enctype="multipart/form-data">
 
-<div id="content">
-    <fieldset>
-        <legend>Formulir Pendaftaran</legend>
-        <form action="proses.php" method="POST" enctype="multipart/form-data">
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" required>
-            
-            <!-- Tambahkan input lainnya sesuai kebutuhan -->
+                <label>
+                    <span>Nama Lengkap</span>
+                    <input type="text" id="nama" name="nama" required>
+                </label>
+                
+                <label>
+                    <span>Tempat/Tanggal Lahir</span>
+                    <input type="text" id="ttl" name="ttl" style="width: 100px;" required> /
+                    <input type="number" id="day" name="day" min="1" max="31" style="width: 50px;" required> -
+                    <input type="number" id="month" name="month" min="1" max="12" style="width: 50px;" required> -
+                    <input type="number" id="year" name="year" min="1989" max="1994" style="width: 60px;" required>
+                </label>
+                
+                <label for="agama">
+                    <span>Agama</span>
+                    <select id="agama" name="agama" required>
+                        <option value="" disabled selected hidden>PILIH</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                    </select>
+                </label>
+                
+                <label for="jenis_kelamin">
+                    <span>Jenis Kelamin</span>
+                    <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
+                    <label for="laki_laki">Laki -laki</label>
+                    <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+                    <label for="perempuan">Perempuan</label>
+                </label>
+                
+                <label for="no_ijazah">
+                    <span>No Izazah SMA/MA</span>
+                    <input type="text" id="no_ijazah" name="no_ijazah" required>
+                </label>
+                
+                <label for="foto">
+                    <span>Foto (Ukuran File Maks.20Kb)</span>
+                    <label id="foto-label" class="file-upload">
+                        Choose File
+                        <input type="file" id="foto" name="foto" accept="image/jpeg, image/png" required>
+                    </label> 
+                    <span>No File Chosen</span>
+                </label>
+                
+                <label for="nama_ayah">Nama Ayah:</label>
+                <input type="text" id="nama_ayah" name="nama_ayah" required><br><br>
 
-            <label for="alamat_rumah">Alamat Rumah</label>
-            <textarea id="alamat_rumah" name="alamat_rumah" required></textarea>
+                <label for="nama_ibu">Nama Ibu:</label>
+                <input type="text" id="nama_ibu" name="nama_ibu" required><br><br>
 
-            <label for="no_telpon">No Telepon</label>
-            <input type="tel" id="no_telpon" name="no_telpon" pattern="[0-9]{10,12}" required>
+                <label for="alamat_rumah">Alamat Rumah</label>
+                <textarea id="alamat_rumah" name="alamat_rumah" required></textarea><br><br>
 
-            <label for="sekolah_asal">Sekolah Asal</label>
-            <input type="text" id="sekolah_asal" name="sekolah_asal" required>
+                <label for="no_telpon">No Telepon</label>
+                <input type="tel" id="no_telpon" name="no_telpon" pattern="[0-9]{10,12}" required><br><br>
 
-            <label for="alamat_sekolah_asal">Alamat Sekolah Asal</label>
-            <textarea id="alamat_sekolah_asal" name="alamat_sekolah_asal" required></textarea>
+                <label for="sekolah_asal">Sekolah Asal:</label>
+                <input type="text" id="sekolah_asal" name="sekolah_asal" required><br><br>
 
-            <label for="info">Tahu Informasi Ini Dari</label>
-            <input type="checkbox" id="koran" name="info[]" value="Koran"> <label for="koran">Koran</label>
-            <input type="checkbox" id="website" name="info[]" value="Website"> <label for="website">Website</label>
-            <input type="checkbox" id="televisi" name="info[]" value="Televisi"> <label for="televisi">Televisi</label>
-            <input type="checkbox" id="radio" name="info[]" value="Radio"> <label for="radio">Radio</label>
-            <input type="checkbox" id="teman" name="info[]" value="Teman"> <label for="teman">Teman</label>
+                <label for="alamat_sekolah_asal">Alamat Sekolah Asal</label>
+                <textarea id="alamat_sekolah_asal" name="alamat_sekolah_asal" required></textarea><br><br>
+        
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="" disabled selected hidden>PILIH</option>
+                    <option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+                    <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                    <option value="Teknik Komputer Kontrol">Teknik Komputer Kontrol</option>
+                    <option value="Teknik Listrik">Teknik Listrik</option>
+                    <option value="Mesin Otomotif">Mesin Otomotif</option>
+                    <option value="Perkeretaapian">Perkeretaapian</option>
+                    <option value="Teknologi Informasi">Teknologi Informasi</option>
+                    <option value="Akuntansi">Akuntansi</option>
+                    </select ><br><br>
 
-            <input type="submit" value="Submit">
-        </form>
-    </fieldset>
-</div>
+                <label for="info">Tahu Informasi Ini Dari</label>
+                <input type="checkbox" id="koran" name="info[]" value="Koran"> <label for="koran">Koran</label>
+                <input type="checkbox" id="website" name="info[]" value="Website"> <label for="website">Website</label>
+                <input type="checkbox" id="televisi" name="info[]" value="Televisi"> <label for="televisi">Televisi</label>
+                <input type="checkbox" id="radio" name="info[]" value="Radio"> <label for="radio">Radio</label>
+                <input type="checkbox" id="teman" name="info[]" value="Teman"> <label for="teman">Teman</label><br>
+
+                <div class="button-container">
+                    <button type="submit">DAFTAR</button>
+                    <button type="reset">BATAL</button>
+                </div>
+            </form>
+        </div>
 </body>
 </html>
 
