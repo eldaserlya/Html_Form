@@ -21,10 +21,10 @@
 <div id="content">
     <h2>Formulir Pendaftaran</h2>
     <form action="proses.php" method="POST" enctype="multipart/form-data">
-        <label for="nama">Nama:</label>
+        <label for="nama">Nama Lengkap:</label>
         <input type="text" id="nama" name="nama" required><br><br>
 
-        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <label for="tanggal_lahir">Tempat Tanggal Lahir:</label>
         <input type="date" id="tanggal_lahir" name="tanggal_lahir" required><br><br>
 
         <label for="jenis_kelamin">Jenis Kelamin:</label>
@@ -79,12 +79,12 @@
         <label for="alamat_sekolah_asal">Alamat Sekolah Asal:</label>
         <textarea id="alamat_sekolah_asal" name="alamat_sekolah_asal" required></textarea><br><br>
 
-        <label for="info">Tahu Informasi Ini Dari:</label><br>
-        <input type="checkbox" id="koran" name="info[]" value="Koran"> <label for="koran">Koran</label><br>
-        <input type="checkbox" id="website" name="info[]" value="Website"> <label for="website">Website</label><br>
-        <input type="checkbox" id="televisi" name="info[]" value="Televisi"> <label for="televisi">Televisi</label><br>
-        <input type="checkbox" id="radio" name="info[]" value="Radio"> <label for="radio">Radio</label><br>
-        <input type="checkbox" id="teman" name="info[]" value="Teman"> <label for="teman">Teman</label><br><br>
+        <label for="info">Tahu Informasi Ini Dari:</label>
+        <input type="checkbox" id="koran" name="info[]" value="Koran"> <label for="koran">Koran</label>
+        <input type="checkbox" id="website" name="info[]" value="Website"> <label for="website">Website</label>
+        <input type="checkbox" id="televisi" name="info[]" value="Televisi"> <label for="televisi">Televisi</label>
+        <input type="checkbox" id="radio" name="info[]" value="Radio"> <label for="radio">Radio</label>
+        <input type="checkbox" id="teman" name="info[]" value="Teman"> <label for="teman">Teman</label>
 
         <button type="submit">DAFTAR</button>
         <button type="reset">BATAL</button>
