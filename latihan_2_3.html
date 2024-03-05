@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
     <style>
-        /* CSS existing styles */
-        .file-upload {
+       .file-upload {
             display: inline-block;
             padding: 8px 16px;
             cursor: pointer;
@@ -19,16 +18,16 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-    
+
         .file-upload:hover {
             background-color: #e0e0e0;
         }
-    
+
         /* Hide input[type=file] */
         input[type="file"] {
             display: none;
         }
-    
+
         /* Center Form */
         #content {
             width: 50%;
@@ -37,19 +36,36 @@
             border: 1px solid #ccc; /* Kotak */
             padding: 20px; /* Ruang di dalam kotak */
         }
-        #alamat_sekolah_asal {
-            width: 300px; /* Lebar textarea */
-            height: 150px; /* Tinggi textarea */
-            text-align: top;
-            vertical-align: top; /* Align alamat sekolah ke atas */
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
-        /* Added CSS for aligning address with table header */
-        label[for="alamat_sekolah_asal"] {
-            vertical-align: top;
-            display: inline-block;
-            width: 150px; /* Adjust this width according to your preference */
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
         }
-    </style>  
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Styling for fieldset */
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        legend {
+            padding: 0 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+    </style>
 </head>
 <body>
 <div id="header">
@@ -57,12 +73,13 @@
 </div>
 
 <div id="content">
-    <h2>Formulir Pendaftaran</h2>
-    <form action="proses.php" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Formulir Pendaftaran</legend>
+        <form action="proses.php" method="POST" enctype="multipart/form-data">
 
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="nama" name="nama" required><br><br>
-        
+
         <label for="jenis_kelamin">Jenis Kelamin:</label>
         <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
         <label for="laki_laki">Laki-laki</label>
