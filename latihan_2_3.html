@@ -49,12 +49,6 @@
             display: inline-block;
             width: 150px; /* Adjust this width according to your preference */
         }
-        /* New CSS for aligning text on the side */
-        .text-pinggir {
-            float: left;
-            width: 30%; /* Adjust this width according to your preference */
-            padding-right: 20px; /* Add some space between text and form */
-        }
     </style>  
 </head>
 <body>
@@ -63,16 +57,12 @@
 </div>
 
 <div id="content">
-    <div class="text-pinggir">
-        <h2>Informasi Pendaftaran:</h2>
-        <p>Silakan lengkapi formulir pendaftaran di samping.</p>
-    </div>
-    <div class="formulir-tengah">
-        <h2>Formulir Pendaftaran</h2>
-        <form action="proses.php" method="POST" enctype="multipart/form-data">
+    <h2>Formulir Pendaftaran</h2>
+    <form action="proses.php" method="POST" enctype="multipart/form-data">
 
-            <label for="nama">Nama Lengkap</label>
-            <input type="text" id="nama" name="nama" required><br><br>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+        
         <label for="jenis_kelamin">Jenis Kelamin:</label>
         <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
         <label for="laki_laki">Laki-laki</label>
