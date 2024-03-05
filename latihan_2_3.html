@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
     <style>
-       .file-upload {
+        .file-upload {
             display: inline-block;
             padding: 8px 16px;
             cursor: pointer;
@@ -64,6 +64,18 @@
             border: 1px solid #ccc;
             background-color: #f9f9f9;
         }
+        #alamat_sekolah_asal {
+            width: 300px; /* Lebar textarea */
+            height: 150px; /* Tinggi textarea */
+            text-align: top;
+            vertical-align: top; /* Align alamat sekolah ke atas */
+        }
+        /* Added CSS for aligning address with table header */
+        label[for="alamat_sekolah_asal"] {
+            vertical-align: top;
+            display: inline-block;
+            width: 150px; /* Adjust this width according to your preference */
+        }
 
     </style>
 </head>
@@ -79,7 +91,7 @@
 
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="nama" name="nama" required><br><br>
-
+        
         <label for="jenis_kelamin">Jenis Kelamin:</label>
         <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki" required>
         <label for="laki_laki">Laki-laki</label>
