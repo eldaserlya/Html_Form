@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
     <style>
+        /* CSS existing styles */
         .file-upload {
             display: inline-block;
             padding: 8px 16px;
@@ -18,16 +19,16 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-
+    
         .file-upload:hover {
             background-color: #e0e0e0;
         }
-
+    
         /* Hide input[type=file] */
         input[type="file"] {
             display: none;
         }
-
+    
         /* Center Form */
         #content {
             width: 50%;
@@ -37,11 +38,18 @@
             padding: 20px; /* Ruang di dalam kotak */
         }
         #alamat_sekolah_asal {
-        width: 300px; /* Lebar textarea */
-        height: 150px; /* Tinggi textarea */
-        text-align: top;
-    }
-    </style>
+            width: 300px; /* Lebar textarea */
+            height: 150px; /* Tinggi textarea */
+            text-align: top;
+            vertical-align: top; /* Align alamat sekolah ke atas */
+        }
+        /* Added CSS for aligning address with table header */
+        label[for="alamat_sekolah_asal"] {
+            vertical-align: top;
+            display: inline-block;
+            width: 150px; /* Adjust this width according to your preference */
+        }
+    </style>  
 </head>
 <body>
 <div id="header">
