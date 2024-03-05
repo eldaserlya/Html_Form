@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <link rel='stylesheet' href='css/main.css'>
+        <title>Div dan Span</title>
+        <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
+    </head>
+    <body>
+        <div id="header">
+            <h1>AKU DAN PENGALAMANKU</h1>
+
+        </div>
+            <div id="link">
+                <ul>
+                    <li><a href="#">London</a></a></li>
+                    <li><a href="#">Paris</a></li>
+                    <li><a herf="#">Tokyo</a></li>
+                </ul>
+            </div>
+        <div id="content">
+            <h2>Formulir Pendaftaran</h2>
+            <form action="proses.php" method="POST">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br><br>
+        
+            <label for="tanggal_lahir">Tanggal Lahir (DD-MM-YYYY):</label>
+            <input type="text" id="tanggal_lahir" name="tanggal_lahir" pattern="\d{2}-\d{2}-\d{4}" required><br><br>
+        
+            <label for="agama">Agama:</label>
+            <select id="agama" name="agama" required>
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+            <option value="Konghucu">Konghucu</option>
+            </select><br><br>
+        
+            <label for="jurusan">Jurusan:</label>
+            <select id="jurusan" name="jurusan" required>
+            <option value="Komputerisasi Akuntansi">Komputerisasi Akuntansi</option>
+            <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+            <option value="Teknik Komputer Kontrol">Teknik Komputer Kontrol</option>
+            <option value="Teknik Listrik">Teknik Listrik</option>
+            <option value="Mesin Otomotif">Mesin Otomotif</option>
+            <option value="Perkeretaapian">Perkeretaapian</option>
+            <option value="Teknologi Informasi">Teknologi Informasi</option>
+            <option value="Akuntansi">Akuntansi</option>
+            </select><br><br>
+        
+            <button type="submit">DAFTAR</button>
+            <button type="reset">BATAL</button>
+            </form>
+        </div>
+        <div id="footer">
+            <em>copyright@EldaSerlya_1234567 2023</em>
+        </div>
+    </body>
+</html>
