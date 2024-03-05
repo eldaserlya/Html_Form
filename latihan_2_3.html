@@ -27,22 +27,28 @@
       input[type="file"] {
         display: none;
       }
+       /* Hide input[type=file] */
+       input[type="file"] {
+            display: none;
+        }
+
+        /* Center Form */
+        #content {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+        }
       </style>
 </head>
 <body>
 <div id="header">
-    <h1>AKU DAN PENGALAMANKU</h1>
+    <h1>Pendaftaran Mahasiswa Baru</h1>
 </div>
-<div id="link">
-    <ul>
-        <li><a href="#">London</a></a></li>
-        <li><a href="#">Paris</a></li>
-        <li><a href="#">Tokyo</a></li>
-    </ul>
-</div>
+
 <div id="content">
     <h2>Formulir Pendaftaran</h2>
     <form action="proses.php" method="POST" enctype="multipart/form-data">
+
         <label for="nama">Nama Lengkap:</label>
         <input type="text" id="nama" name="nama" required><br><br>
 
