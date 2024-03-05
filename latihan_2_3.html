@@ -3,32 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Div dan Span</title>
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
     <style>
-    .file-upload {
-        display: inline-block;
-        padding: 8px 16px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f9f9f9;
-        color: #333;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-      }
-      
-      .file-upload:hover {
-        background-color: #e0e0e0;
-      }
-      
-      /* Hide input[type=file] */
-      input[type="file"] {
-        display: none;
-      }
-       /* Hide input[type=file] */
-       input[type="file"] {
+        .file-upload {
+            display: inline-block;
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-upload:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Hide input[type=file] */
+        input[type="file"] {
             display: none;
         }
 
@@ -40,7 +36,7 @@
             border: 1px solid #ccc; /* Kotak */
             padding: 20px; /* Ruang di dalam kotak */
         }
-      </style>
+    </style>
 </head>
 <body>
 <div id="header">
@@ -85,11 +81,11 @@
         <label for="no_ijazah">No Ijazah:</label>
         <input type="text" id="no_ijazah" name="no_ijazah" required><br><br>
 
-        <label for="foto" >Foto (Ukuran File Maks.20Kb): </label> <label id="foto-label" class="file-upload">
+        <label for="foto">Foto (Ukuran File Maks.20Kb): </label> <label id="foto-label" class="file-upload">
             Choose File
             <input type="file" id="foto" name="foto" accept="image/jpeg, image/png" required>
         </label> No File Chosen<br><br>
-        
+
 
         <label for="nama_ayah">Nama Ayah:</label>
         <input type="text" id="nama_ayah" name="nama_ayah" required><br><br>
