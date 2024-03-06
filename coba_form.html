@@ -2,22 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Form Sederhana</title>
+    <title>Form Submit Reset</title>
     <link rel="icon" type="image/png" href="html_form/html_form/gambar/icon.png" sizes="16x16"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <form action="/action_page.php"  method="get" method="post" target="_blank">
-        <label for="depan">Nama Depan:</label><br>
-        <input type="text" id="depan" name="i_name" value="isi nama depan anda"><br>
-        <label for="n_belakang">Nama Belakang:</label><br>
-        <input type="text" id="n_belakang" name="i_belakang" value="isi nama belakang anda"><br>
+    <form action="/action_page.php" method="post" method="get" target="_blank">
+        <label for="depan">Nama Depan:</label><br><br>
+        <input type="text" id="depan" name="i_name" value="isi nama depan anda" onkeydown="clearField(event, 'depan')"><br><br>
+        <label for="n_belakang">Nama Belakang:</label><br><br>
+        <input type="text" id="n_belakang" name="i_belakang" value="isi nama belakang anda" onkeydown="clearField(event, 'n_belakang')"><br><br>
         <input type="submit" value="Kirim">
-        <input type="reset" value="Reset">
+        <input type="reset" value="Reset" onclick="resetFields()">
     </form> 
-    <p>Jika Anda mengeklik tombol "Kirim", data formulir akan dikirim ke halaman bernama "/action_page.php"</p>
-    <p>Apabila hanya menggunakan methode="post" saja, maka url tidak akan menampilkan nama kita.
-        Apabila menambhkan methode="get" atau menambhakan keduanya, maka pada url akan menambahkan nama yang telah kita buat(url pada halaman selanjutnya).
-    </p>
+    <p>Kesimpulan : Halaman ini untuk membuat form menggunakan value HTML dan JavaScript. Form ini memiliki dua input field untuk mengisi nama depan dan nama belakang, serta tombol submit dan reset. </p>
+    
+    <script>
+        function clearField(event, id) {
+            if (event.keyCode === 8) { // Tombol backspace
+                document.getElementById(id).value = "";
+                event.preventDefault(); // Untuk mencegah browser mundur halaman
+            }
+        }
+
+        function resetFields() {
+            document.getElementById('depan').value = "isi nama depan anda";
+            document.getElementById('n_belakang').value = "isi nama belakang anda";
+        }
+    </script>
 </body>
 </html>
+
