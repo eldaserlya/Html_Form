@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTP-8">
-        <title>Div dan Span</title>
-        <link rel="icon" type="img/png" href="html_form/html_form/gambar/icon.png" sizes="16x16"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div id="berita">
-            <img src="html_form/html_form/gambar/gambar1.jpg" alt="gambar pemandangan">
-            <p>Gambar Ini </p>
-            <p>Kombinasinya bagus sekali</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Div dan Span 1</title>
+    <link rel="icon" type="image/png" href="html_form/html_form/gambar/icon.png" sizes="16x16"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            margin: 0;
+            background-color: aqua;
+        }
+        .container {
+            display: flex;
+            border: 2px solid black; 
+            padding: 25px;
+            background-color: lavenderblush; 
+        }
+        .image-box {
+            flex: 2;
+            margin-left:0;
+            align-items: center;
+        }
+        .text-box {
+            flex: 2;
+        }
+        .phone {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <img src="gambar/gambar7.jpg" alt="gambar pemandangan" width="50%">
         </div>
-        <ul>
-            <li>Elda<span class="phone"> 088888222266</span></li>
-            <li>Dwi<span class="phone"> 085555444666</span></li>
-            <li>Fadilllah<span class="phone"> 089799996578</span></li>
-        </ul>
-    </body>
-    </html>
+        <div class="text-box">
+            <p>Lukisan ini langka</p>
+            <p>Kombinasinya sangat bagus segera order sebelum sold out !TERBATAS!</p>
+            <ul>
+                <p>Open Free Order lukisan jika ingin pesan hubungi No di bawah ini! :</p>
+                <li>Elda<span class="phone"> 088888222266</span></li>
+                <li>Dwi<span class="phone"> 085555444666</span></li>
+                <li>Fadilllah<span class="phone"> 089799996578</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
